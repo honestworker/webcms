@@ -1,7 +1,6 @@
-vendor/
+/vendor/
 node_modules/
 npm-debug.log
-
 # Laravel 4 specific
 bootstrap/compiled.php
 app/storage/
@@ -18,3 +17,12 @@ Homestead.json
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
+
+*/images
+
+/web88/vendor/
+/web88/node_modules/
+.env
+/web88/.env
+.env
+/web88/.env

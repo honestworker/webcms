@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Header:: Edit</title>
+<!-- TemplateEndEditable -->
+<!-- OCK front end icons css --> 
+<link type="text/css" rel="stylesheet" href="../admin_html_cms/icons/font-awesome.min.css"> 
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../admin_html_cms/images/icons/favicon.ico" rel="shortcut icon">
+   
+    <link href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic%7CPT+Gudea:400,700,400italic%7CPT+Oswald:400,700,300" rel="stylesheet" id="googlefont">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    
+ <!--Loading bootstrap css-->
+<link type="text/css" rel="stylesheet" href="../admin_html_cms/vendors/jquery-ui-1.10.3.custom/css/ui-lightness/jquery-ui-1.10.3.custom.css">
+<link type="text/css" rel="stylesheet" href="../admin_html_cms/vendors/font-awesome/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="../admin_html_cms/vendors/bootstrap/css/bootstrap.min.css">
+    
+<!--LOADING SCRIPTS FOR PAGE-->
+<link type="text/css" rel="stylesheet" href="../admin_html_cms/vendors/bootstrap-datepicker/css/datepicker.css">
+<link type="text/css" rel="stylesheet" href="../admin_html_cms/vendors/bootstrap-switch/css/bootstrap-switch.css">
+    
+    <!--Loading style vendors-->
+<link type="text/css" rel="stylesheet" href="../admin_html_cms/vendors/animate.css/animate.css">
+<link type="text/css" rel="stylesheet" href="../admin_html_cms/vendors/jquery-pace/pace.css">
+
+<!--Loading style-->
+<link type="text/css" rel="stylesheet" href="../admin_html_cms/css/style.css">  
+<!--<link type="text/css" rel="stylesheet" href="css/style.css">-->
+<link type="text/css" rel="stylesheet" href="../admin_html_cms/css/style-mango.css" id="theme-style">
+<link type="text/css" rel="stylesheet" href="../admin_html_cms/css/vendors.css">
+<link type="text/css" rel="stylesheet" href="../admin_html_cms/css/themes/grey.css" id="color-style">
+<link type="text/css" rel="stylesheet" href="../admin_html_cms/css/style-responsive.css">
+
+    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+</head>
+<body>
+<div>
+<!--BEGIN TO TOP--><a id="totop" href="#"><i class="fa fa-angle-up"></i></a><!--END BACK TO TOP-->
+  <div id="wrapper"><!--BEGIN TOPBAR-->
+        <nav id="topbar" role="navigation" style="margin-bottom: 0;" class="navbar navbar-default navbar-static-top">
+          <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a id="logo" href="http://www.webqom.com/web88.html" target="_blank" class="navbar-brand"><img src="../admin_html_cms/images/logo_web88.png"></a>          </div>
+            
+            	<div class="topbar-main">
+                	<a id="logo" href="#" class="navbar-brand"><img src="../admin_html_cms/images/logo.jpg"></a>
+                    <a id="menu-toggle" href="#" class="btn hidden-xs"><i class="fa fa-bars"></i></a>
+                    
+                <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
+                    <div class="input-icon right"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Search here..." class="form-control"/></div>
+                </form>
+                <ul class="nav navbar-top-links navbar-right">
+					               
+<li class="dropdown"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><img src="../admin_html_cms/images/profile/image_hock.jpg" alt="" class="img-responsive img-circle"/>&nbsp;
+                        Support Webqom
+                        &nbsp;<span class="caret"></span></a>
+<ul class="dropdown-menu dropdown-user pull-right animated bounceInLeft">
+                            <li>
+                                <div class="navbar-content">
+                                    <div class="row">
+                                        <div class="col-md-5 col-xs-5"><img src="../admin_html_cms/images/profile/image_hock.jpg" alt="" class="img-responsive img-circle"/>
+
+                                            <p class="text-center mtm">
+                                            	<a href="#" data-target="#modal-change-avatar" data-toggle="modal" class="change-avatar">
+                                                <small>Change Avatar</small>                                                </a></p>
+                                      </div>
+                                        <div class="col-md-7 col-xs-5"><span>Support Webqom</span>
+
+                                            <p class="text-muted small">support@webqom.com</p>
+
+                                            <div class="divider"></div>
+                                            <!--<a href="#" class="btn btn-primary btn-sm">View Profile</a>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navbar-footer">
+                                    <div class="navbar-footer-content">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xs-6"><a href="#" class="btn btn-default btn-sm" data-target="#modal-change-password" data-toggle="modal">Change Password</a></div>
+                                            <div class="col-md-6 col-xs-6"><a href="#" class="btn btn-default btn-sm pull-right">Sign Out</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                      </ul>
+                  </li>
+                </ul>
+          </div>
+        </nav>
+        <!--Modal Change Avatar start-->
+                            <div id="modal-change-avatar" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                    <h4 id="modal-login-label2" class="modal-title">Change Avatar</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="form">
+                                      <form class="form-horizontal">
+                                        
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label">Upload Avatar Image </label>
+                                          <div class="col-md-8">
+                                            <div class="text-15px margin-top-10px"> 
+                                           	  <img src="../admin_html_cms/images/profile/image_hock.jpg" alt="Avatar" class="img-responsive"><br/>
+                                                <input id="exampleInputFile1" type="file"/>
+                                              <br/>
+                                                <span class="help-block">(Image dimension: 100 x 100 pixels, JPEG/GIF/PNG only, Max. 2MB) </span> </div>
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                          <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <!--END MODAL Change Avatar-->
+        <!--Modal Change Password start-->
+                <div id="modal-change-password" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                <h4 id="modal-login-label" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Change Password</h4></div>
+                            <div class="modal-body">
+                                <div class="form">
+                                    <form class="form-horizontal">
+                                        
+                                        <div class="form-group">
+                                        	<label for="password" class="control-label col-md-4">New Password</label>
+
+                                            <div class="col-md-8">
+                                            	<div class="input-icon"><i class="fa fa-key"></i> <input id="password" type="password" placeholder="New Password" class="form-control"/><span class="text-10px">(Password length should be between 6-12 characters)</span>                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                        	<label for="password" class="control-label col-md-4">Confirm New Password</label>
+
+                                            <div class="col-md-8">
+                                            	<div class="input-icon"><i class="fa fa-key"></i> <input id="password" type="password" placeholder="Confirm New Password" class="form-control"/><span class="text-10px">(Password length should be between 6-12 characters)</span>                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <div class="col-md-offset-4 col-md-8">
+                                               <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp;
+                                              <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a>                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!--END MODAL CHANGE PASSWORD-->
+        <!--END TOPBAR-->
+        
+        <!--BEGIN SIDEBAR MENU-->
+        <nav id="sidebar" role="navigation" class="navbar-default navbar-static-side">
+            <div class="sidebar-collapse menu-scroll">
+                <ul id="side-menu" class="nav">
+                    <li class="clock"><strong id="get-date"></strong>
+
+                        <div class="digital-clock">
+                            <div id="getHours" class="get-time"></div>
+                            <span>:</span>
+
+                            <div id="getMinutes" class="get-time"></div>
+                            <span>:</span>
+
+                            <div id="getSeconds" class="get-time"></div>
+                        </div>
+                    </li>
+                    <li class="sidebar-heading"><h4>CMS Pages</h4></li>
+                    <li><a href="dashboard.html"><i class="fa fa-laptop fa-fw"></i><span class="menu-title">Dashboard</span></a></li>
+                    
+                  <li><a href="about_us_edit.html"><i class="fa fa-user fa-fw"></i><span class="menu-title">About Us</span></a> </li>
+                  <li><a href="#"><i class="fa fa-briefcase fa-fw"></i><span class="menu-title">Careers</span><span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                          <li><a href="careers_job_vacancy_list.html">Vacancies Listing</a></li>
+                          <li><a href="careers_online_applicants_list.html">Online Applicants Listing</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="services_edit.html"><i class="fa fa-tags fa-fw"></i><span class="menu-title">Our Services</span></a> </li>
+                  <li><a href="our_stores_edit.html"><i class="fa fa-map-marker fa-fw"></i><span class="menu-title">Our Stores</span></a> </li>
+                  <li><a href="contact_us_edit.html"><i class="fa fa-phone fa-fw"></i><span class="menu-title">Contact Us &amp; Feedback</span></a> </li>
+                 
+                    
+                    <li class="sidebar-heading"><h4>Global Settings</h4></li>
+                   <!-- TemplateBeginEditable name="EditRegion3" --> 
+                  <li class="active"><a href="header_setup.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Header Setup</span></a></li>
+                  <li><a href="footer_setup.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Footer Setup</span></a></li>
+                  <li><a href="bottom_animated_services_list.html"><i class="fa fa-cogs fa-fw"></i><span class="menu-title">Animated Services Icons</span></a></li>
+                  <!-- TemplateEndEditable -->
+              </ul>
+          </div>
+</nav>
+        <!--END SIDEBAR MENU--><!--BEGIN PAGE WRAPPER-->
+      <div id="page-wrapper"><!--BEGIN PAGE HEADER & BREADCRUMB-->
+        
+        <div class="page-header-breadcrumb">
+          <div class="page-heading hidden-xs">
+            <h1 class="page-title">Global Settings</h1>
+          </div>
+          
+          <!-- TemplateBeginEditable name="EditRegion1" -->
+          <ol class="breadcrumb page-breadcrumb">
+            <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Dashboard</a>&nbsp; <i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li>Global Settings &nbsp;<i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li class="active">Header - Edit</li>
+          </ol>
+          <!-- TemplateEndEditable --></div>
+        <!--END PAGE HEADER & BREADCRUMB--><!--BEGIN CONTENT-->
+        <!-- TemplateBeginEditable name="EditRegion2" -->
+        <div class="page-content">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>Header <i class="fa fa-angle-right"></i> Edit</h2>
+              <div class="clearfix"></div>
+              <div class="alert alert-success alert-dismissable">
+                <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button>
+                <i class="fa fa-check-circle"></i> <strong>Success!</strong>
+                <p>The information has been saved/updated successfully.</p>
+              </div>
+              <div class="alert alert-danger alert-dismissable">
+                <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button>
+                <i class="fa fa-times-circle"></i> <strong>Error!</strong>
+                <p>The information has not been saved/updated. Please correct the errors.</p>
+              </div>
+              <div class="pull-left"> Last updated: <span class="text-blue">15 Sept, 2014 @ 12.00PM</span> </div>
+              <div class="clearfix"></div>
+              <p></p>
+              <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#headertext" data-toggle="tab">Header Text</a></li>
+              </ul>
+              <div id="myTabContent" class="tab-content">
+                <div id="headertext" class="tab-pane fade in active">
+                  <div class="portlet">
+                    <div class="portlet-header">
+                      <div class="caption">Header Text</div>
+                      <div class="tools"> <i class="fa fa-chevron-up"></i> </div>
+                    </div>
+                    <div class="portlet-body">
+                      <div class="table-responsive mtl">
+                        <table class="table table-hover table-striped">
+                          <thead>
+                            <tr>
+                              <th width="1%"><input type="checkbox"/></th>
+                              <th>#</th>
+                              <th>Title</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><input type="checkbox"/></td>
+                              <td>1</td>
+                              <td>CUSTOMER SERVICE: +(603) 7983-2020</td>
+                              <td><a href="#" data-hover="tooltip" data-placement="top" data-target="#modal-edit-text" data-toggle="modal" title="Edit"><span class="label label-sm label-success"><i class="fa fa-pencil"></i></span></a> <a href="#" data-hover="tooltip" data-placement="top" title="Delete" data-target="#modal-delete-1" data-toggle="modal"><span class="label label-sm label-red"><i class="fa fa-trash-o"></i></span></a>
+                                  <!--Modal Edit copyright start-->
+                                  <div id="modal-edit-text" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                    <div class="modal-dialog modal-wide-width">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                          <h4 id="modal-login-label3" class="modal-title">Header Text Edit</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                          <div class="form">
+                                            <form class="form-horizontal">
+                                              <div class="form-group">
+                                                <label class="col-md-3 control-label">Header Text</label>
+                                                <div class="col-md-9">
+                                                  <div class="text-blue border-bottom">You can edit the content by clicking the text section below.</div>
+                                                  <div contenteditable="true">CUSTOMER SERVICE: +(603) 7983-2020.</div>
+                                                </div>
+                                              </div>
+                                              <div class="form-actions">
+                                                <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <!--END MODAL Edit copyright -->
+                                  <!--Modal delete start-->
+                                  <div id="modal-delete-1" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                          <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete this? </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                          <p><strong>#1:</strong> CUSTOMER SERVICE: +(603) 7983-2020.</p>
+                                          <div class="form-actions">
+                                            <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <!-- modal delete end -->
+                              </td>
+                            </tr>
+                          </tbody>
+                          <tfoot>
+                            <tr>
+                              <td colspan="4"></td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                      <!-- end table responsive -->
+                    </div>
+                    <!-- end portlet body -->
+                  </div>
+                  <!-- End porlet -->
+                </div>
+                <!-- end tab header text -->
+              </div>
+              <!-- end tab content -->
+              <div class="clearfix"></div>
+            </div>
+            <!-- end col-lg-12 -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- TemplateEndEditable -->
+        <!--END CONTENT-->
+            
+            <!--BEGIN FOOTER-->
+<div class="page-footer">
+                <div class="copyright"><span class="text-15px">2015 © <a href="http://www.webqom.com" target="_blank">Webqom Technologies Sdn Bhd.</a> Any queries, please contact <a href="mailto:support@webqom.com">Webqom Support</a>.</span>
+                	<div class="pull-right"><img src="../admin_html_cms/images/logo_webqom.png" alt="Webqom Technologies Sdn Bhd"></div>
+                </div>
+        </div>
+    <!--END FOOTER--></div>
+  <!--END PAGE WRAPPER--></div>
+</div>
+<script src="../admin_html_cms/js/jquery-1.9.1.js"></script>
+<script src="../admin_html_cms/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../admin_html_cms/js/jquery-ui.js"></script>
+<!--loading bootstrap js-->
+<script src="../admin_html_cms/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="../admin_html_cms/vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="../admin_html_cms/js/html5shiv.js"></script>
+<script src="../admin_html_cms/js/respond.min.js"></script>
+<script src="../admin_html_cms/vendors/metisMenu/jquery.metisMenu.js"></script>
+<script src="../admin_html_cms/vendors/slimScroll/jquery.slimscroll.js"></script>
+<script src="../admin_html_cms/vendors/jquery-cookie/jquery.cookie.js"></script>
+<script src="../admin_html_cms/js/jquery.menu.js"></script>
+<script src="../admin_html_cms/vendors/jquery-pace/pace.min.js"></script>
+
+<!--LOADING SCRIPTS FOR PAGE-->
+<script src="../admin_html_cms/vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="../admin_html_cms/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../admin_html_cms/vendors/moment/moment.js"></script>
+<script src="../admin_html_cms/vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../admin_html_cms/vendors/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+<script src="../admin_html_cms/vendors/bootstrap-clockface/js/clockface.js"></script>
+<script src="../admin_html_cms/vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="../admin_html_cms/vendors/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script src="../admin_html_cms/vendors/jquery-maskedinput/jquery-maskedinput.js"></script>
+<script src="../admin_html_cms/js/form-components.js"></script>
+<!--LOADING SCRIPTS FOR PAGE-->
+
+<!-- TemplateBeginEditable name="EditRegion4" -->
+<script src="../admin_html_cms/vendors/tinymce/js/tinymce/tinymce.min.js"></script>
+<script src="../admin_html_cms/vendors/ckeditor/ckeditor.js"></script>
+<script src="../admin_html_cms/js/ui-tabs-accordions-navs.js"></script>
+<!-- TemplateEndEditable -->
+
+
+<!--CORE JAVASCRIPT-->
+<script src="../admin_html_cms/js/main.js"></script>
+<script src="../admin_html_cms/js/holder.js"></script>
+</body>
+</html>

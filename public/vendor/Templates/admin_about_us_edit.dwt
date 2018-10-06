@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>About Us:: Edit</title>
+<!-- TemplateEndEditable -->
+<!-- OCK front end icons css --> 
+<link type="text/css" rel="stylesheet" href="../admin_html/icons/font-awesome.min.css"> 
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../admin_html/images/icons/favicon.ico" rel="shortcut icon">
+   
+    <link href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic%7CPT+Gudea:400,700,400italic%7CPT+Oswald:400,700,300" rel="stylesheet" id="googlefont">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    
+ <!--Loading bootstrap css-->
+ <link type="text/css" rel="stylesheet" href="../admin_html/vendors/jquery-ui-1.10.3.custom/css/ui-lightness/jquery-ui-1.10.3.custom.css">
+<link type="text/css" rel="stylesheet" href="../admin_html/vendors/font-awesome/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="../admin_html/vendors/bootstrap/css/bootstrap.min.css">
+    
+<!--LOADING SCRIPTS FOR PAGE-->
+<link type="text/css" rel="stylesheet" href="../admin_html/vendors/bootstrap-datepicker/css/datepicker.css">
+<link type="text/css" rel="stylesheet" href="../admin_html/vendors/bootstrap-switch/css/bootstrap-switch.css">
+    
+    <!--Loading style vendors-->
+<link type="text/css" rel="stylesheet" href="../admin_html/vendors/animate.css/animate.css">
+<link type="text/css" rel="stylesheet" href="../admin_html/vendors/jquery-pace/pace.css">
+
+<!--Loading style-->
+<link type="text/css" rel="stylesheet" href="../admin_html/css/style.css">  
+<!--<link type="text/css" rel="stylesheet" href="css/style.css">-->
+<link type="text/css" rel="stylesheet" href="../admin_html/css/style-mango.css" id="theme-style">
+<link type="text/css" rel="stylesheet" href="../admin_html/css/vendors.css">
+<link type="text/css" rel="stylesheet" href="../admin_html/css/themes/grey.css" id="color-style">
+<link type="text/css" rel="stylesheet" href="../admin_html/css/style-responsive.css">
+
+    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+</head>
+<body>
+<div>
+<!--BEGIN TO TOP--><a id="totop" href="#"><i class="fa fa-angle-up"></i></a><!--END BACK TO TOP-->
+  <div id="wrapper"><!--BEGIN TOPBAR-->
+        <nav id="topbar" role="navigation" style="margin-bottom: 0;" class="navbar navbar-default navbar-static-top">
+          <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a id="logo" href="http://www.webqom.com/web88.html" target="_blank" class="navbar-brand"><img src="../admin_html/images/logo_web88.png"></a>          </div>
+            
+            	<div class="topbar-main">
+                	<a id="logo" href="#" class="navbar-brand"><img src="../admin_html/images/logo.jpg"></a>
+                    <a id="menu-toggle" href="#" class="btn hidden-xs"><i class="fa fa-bars"></i></a>
+                    
+                <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
+                    <div class="input-icon right"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Search here..." class="form-control"/></div>
+                </form>
+                <ul class="nav navbar-top-links navbar-right">
+					<li><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-fw"></i><span class="badge badge-blue">3</span></a></li>                
+                    <li class="dropdown"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><img src="../admin_html/images/profile/image_hock.jpg" alt="" class="img-responsive img-circle"/>&nbsp;
+                        Support Webqom
+                        &nbsp;<span class="caret"></span></a>
+                  <ul class="dropdown-menu dropdown-user pull-right animated bounceInLeft">
+                            <li>
+                                <div class="navbar-content">
+                                    <div class="row">
+                                        <div class="col-md-5 col-xs-5"><img src="../admin_html/images/profile/image_hock.jpg" alt="" class="img-responsive img-circle"/>
+
+                                            <p class="text-center mtm">
+                                            	<a href="#" data-target="#modal-change-avatar" data-toggle="modal" class="change-avatar">
+                                                <small>Change Avatar</small>                                                </a></p>
+                                      </div>
+                                        <div class="col-md-7 col-xs-5"><span>Support Webqom</span>
+
+                                            <p class="text-muted small">support@webqom.com</p>
+
+                                            <div class="divider"></div>
+                                            <!--<a href="#" class="btn btn-primary btn-sm">View Profile</a>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navbar-footer">
+                                    <div class="navbar-footer-content">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xs-6"><a href="#" class="btn btn-default btn-sm" data-target="#modal-change-password" data-toggle="modal">Change Password</a></div>
+                                            <div class="col-md-6 col-xs-6"><a href="#" class="btn btn-default btn-sm pull-right">Sign Out</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                      </ul>
+                  </li>
+                </ul>
+          </div>
+        </nav>
+        <!--Modal Change Avatar start-->
+                            <div id="modal-change-avatar" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                    <h4 id="modal-login-label2" class="modal-title">Change Avatar</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="form">
+                                      <form class="form-horizontal">
+                                        
+                                        <div class="form-group">
+                                          <label class="col-md-4 control-label">Upload Avatar Image </label>
+                                          <div class="col-md-8">
+                                            <div class="text-15px margin-top-10px"> 
+                                            	<img src="../admin_html/images/profile/image_hock.jpg" alt="Avatar" class="img-responsive"><br/>
+                                                <input id="exampleInputFile1" type="file"/>
+                                              <br/>
+                                                <span class="help-block">(Image dimension: 100 x 100 pixels, JPEG/GIF/PNG only, Max. 2MB) </span> </div>
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                          <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <!--END MODAL Change Avatar-->
+        <!--Modal Change Password start-->
+                <div id="modal-change-password" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                <h4 id="modal-login-label" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Change Password</h4></div>
+                            <div class="modal-body">
+                                <div class="form">
+                                    <form class="form-horizontal">
+                                        
+                                        <div class="form-group">
+                                        	<label for="password" class="control-label col-md-4">New Password</label>
+
+                                            <div class="col-md-8">
+                                            	<div class="input-icon"><i class="fa fa-key"></i> <input id="password" type="password" placeholder="New Password" class="form-control"/><span class="text-10px">(Password length should be between 6-12 characters)</span>                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                        	<label for="password" class="control-label col-md-4">Confirm New Password</label>
+
+                                            <div class="col-md-8">
+                                            	<div class="input-icon"><i class="fa fa-key"></i> <input id="password" type="password" placeholder="Confirm New Password" class="form-control"/><span class="text-10px">(Password length should be between 6-12 characters)</span>                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <div class="col-md-offset-4 col-md-8">
+                                               <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp;
+                                              <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a>                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!--END MODAL CHANGE PASSWORD-->
+        <!--END TOPBAR-->
+        
+        <!--BEGIN SIDEBAR MENU-->
+        <nav id="sidebar" role="navigation" class="navbar-default navbar-static-side">
+            <div class="sidebar-collapse menu-scroll">
+                <ul id="side-menu" class="nav">
+                    <li class="clock"><strong id="get-date"></strong>
+
+                        <div class="digital-clock">
+                            <div id="getHours" class="get-time"></div>
+                            <span>:</span>
+
+                            <div id="getMinutes" class="get-time"></div>
+                            <span>:</span>
+
+                            <div id="getSeconds" class="get-time"></div>
+                        </div>
+                    </li>
+                    <li class="sidebar-heading"><h4>CMS Pages</h4></li>
+                    <li><a href="dashboard.html"><i class="fa fa-laptop fa-fw"></i><span class="menu-title">Dashboard</span></a></li>
+                    <!-- TemplateBeginEditable name="EditRegion3" -->
+                    <li class="active"><a href="about_us_edit.html"><i class="fa fa-user fa-fw"></i><span class="menu-title">About Us</span></a> </li>
+                    <li><a href="#"><i class="fa fa-briefcase fa-fw"></i><span class="menu-title">Careers</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="careers_job_vacancy_list.html">Vacancies Listing</a></li>
+                            <li><a href="careers_online_applicants_list.html">Online Applicants Listing</a></li>
+                        </ul>
+                    </li>
+					<li><a href="services_edit.html"><i class="fa fa-tags fa-fw"></i><span class="menu-title">Our Services</span></a> </li>
+					<li><a href="our_stores_edit.html"><i class="fa fa-map-marker fa-fw"></i><span class="menu-title">Our Stores</span></a> </li>
+                    <li><a href="contact_us_edit.html"><i class="fa fa-phone fa-fw"></i><span class="menu-title">Contact Us &amp; Feedback</span></a> </li>
+                    <li><a href="newsletter_subscription_list.html"><i class="fa fa-envelope fa-fw"></i><span class="menu-title">Newsletter Subscription</span></a> </li>
+                    <!-- TemplateEndEditable -->
+                    <li class="sidebar-heading"><h4>Orders</h4></li>
+                    <li><a href="#"><i class="fa fa-shopping-cart fa-fw"></i><span class="menu-title">Orders</span><span class="fa arrow"></span><span class="badge badge-blue">3</span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="orders_list.html">View All Orders</a></li>
+							<li><a href="shipments_list.html">View All Shipments</a></li>
+                        </ul>
+                  </li>
+                    <li class="sidebar-heading"><h4>Customers</h4></li>
+                    <li><a href="administrators_list.html"><i class="fa fa-cog fa-fw"></i><span class="menu-title">Administrators</span></a> </li>
+					<li><a href="customers_list.html"><i class="fa fa-user fa-fw"></i><span class="menu-title">Customers</span></a></li>
+                    <li><a href="user_groups_list.html"><i class="fa fa-users fa-fw"></i><span class="menu-title">User Groups</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>Products</h4></li>
+                    <li><a href="categories_list.html"><i class="fa fa-cog fa-fw"></i><span class="menu-title">Categories</span></a> </li>
+					<li><a href="products_list.html"><i class="fa fa-wrench fa-fw"></i><span class="menu-title">Products</span></a></li>
+                    <li><a href="filters_list.html"><i class="fa fa-filter fa-fw"></i><span class="menu-title">Filters</span></a></li>
+                    <li><a href="brands_list.html"><i class="fa fa-list fa-fw"></i><span class="menu-title">Brands Setup</span></a></li>
+                    <li><a href="colors_list.html"><i class="fa fa-pencil-square fa-fw"></i><span class="menu-title">Colors Setup</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>Promotions</h4></li>
+                    <li><a href="global_discounts_list.html"><i class="fa fa-cog fa-fw"></i><span class="menu-title">Global Discounts</span></a> </li>
+					<li><a href="promo_codes_list.html"><i class="fa fa-qrcode fa-fw"></i><span class="menu-title">Promo Codes / Global Coupons</span></a></li>
+                    
+                    <li class="sidebar-heading"><h4>Banners</h4></li>
+                    <li><a href="#"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Index Banners</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="index_banner_top_list.html">Top Banner</a></li>
+							<li><a href="index_middle_top_list.html">Middle Top Banner</a></li>
+                            <li class="active"><a href="index_middle_bottom_list.html">Middle Bottom Banner</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="left_banner_list.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Left Banners</span></a></li>
+					<li><a href="left_promotion_banner_list.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Left Promotion Banners</span></a></li>
+                    <li><a href="product_banner_list.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Product Banners</span></a></li>
+                    <li class="sidebar-heading"><h4>Global Settings</h4></li>
+                    <li><a href="header_setup.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Header Setup</span></a></li>
+                    <li><a href="footer_setup.html"><i class="fa fa-check-circle fa-fw"></i><span class="menu-title">Footer Setup</span></a></li>
+                    <li><a href="bottom_animated_services_list.html"><i class="fa fa-cogs fa-fw"></i><span class="menu-title">Animated Services Icons</span></a></li>
+              </ul>
+          </div>
+    </nav>
+        <!--END SIDEBAR MENU--><!--BEGIN PAGE WRAPPER-->
+      <div id="page-wrapper"><!--BEGIN PAGE HEADER & BREADCRUMB-->
+        
+        <div class="page-header-breadcrumb">
+          <div class="page-heading hidden-xs">
+            <h1 class="page-title">CMS Pages</h1>
+          </div>
+          
+          <!-- TemplateBeginEditable name="EditRegion1" -->
+          <ol class="breadcrumb page-breadcrumb">
+            <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Dashboard</a>&nbsp; <i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li>CMS Pages &nbsp;<i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li class="active">About Us - Edit</li>
+          </ol>
+          <!-- TemplateEndEditable --></div>
+        <!--END PAGE HEADER & BREADCRUMB--><!--BEGIN CONTENT-->
+        <!-- TemplateBeginEditable name="EditRegion2" -->
+        <div class="page-content">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>About Us <i class="fa fa-angle-right"></i> Edit</h2>
+              <div class="clearfix"></div>
+              <div class="alert alert-success alert-dismissable">
+                <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button>
+                <i class="fa fa-check-circle"></i> <strong>Success!</strong>
+                <p>The information has been saved/updated successfully.</p>
+              </div>
+              <div class="alert alert-danger alert-dismissable">
+                <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button>
+                <i class="fa fa-times-circle"></i> <strong>Error!</strong>
+                <p>The information has not been saved/updated. Please correct the errors.</p>
+              </div>
+              <div class="pull-left"> Last updated: <span class="text-blue">15 Sept, 2014 @ 12.00PM</span> </div>
+              <div class="clearfix"></div>
+              <p></p>
+              <div class="portlet">
+                <div class="portlet-header">
+                  <div class="caption">Page Info</div>
+                  <br/>
+                  <span class="text-blue text-12px">You can edit the content by clicking the text section below.</span>
+                  <div class="tools"> <i class="fa fa-chevron-up"></i> </div>
+                </div>
+                <div class="portlet-body">
+                  <div contenteditable="true">
+                    <div id="page-header">
+                      <h1>About Us</h1>
+                      <div class="sm-margin"></div>
+                      <h2>Improve people's lifestyle by providing high class retail experience</h2>
+                      <p class="line">&nbsp;</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="portlet">
+                <div class="portlet-header">
+                  <div class="caption">Page Content</div>
+                  <br/>
+                  <span class="text-blue text-12px">You can edit the content by clicking the text section below.</span>
+                  <div class="tools"><i class="fa fa-chevron-up"></i></div>
+                </div>
+                <div class="portlet-body">
+                  <!-- message from MD start -->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="hero-unit">
+                        <div contenteditable="true">
+                          <h2>Message From MD</h2>
+                        </div>
+                        <span class="small-bottom-border big"></span>
+                        <div contenteditable="true">
+                          <p>Mr. Tan Long Kee / Managing Director</p>
+                        </div>
+                      </div>
+                      <div class="md-margin2x"></div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div contenteditable="true">
+                            <p>When my late father Mr Tan Boon Ming founded TBM in 1945, he has always been committed to providing genuine and sincere customer service in all aspects of the business. Ove the years, without losing sight of his commitment, our wonderful team of dedicated people has weaved TBM into the colourful fabric of Klang valley by always providing for the most current lifestyle trends. Today, we are very proud to be carrying over 30 well-known brands of consumer electronics and home electrical appliances. Meanwhile, we are still looking forward to expand our range of products and services to enhance our customers' way of life.</p>
+                            <p>In the face of a rapidly developing world, our next challenge is to innovate the way we improve our customer's lifestyle. It is our aim to create a unique and distinguished retail experience to our customers. We would like to thank everybody – customers, suppliers and staff, who have supported us over the years. We will strive hard to continue in developing a dynamic and sustainable relationship with all of TBM's stakeholders.</p>
+                          </div>
+                          <div class="md-margin"></div>
+                          <hr>
+                        </div>
+                        <!-- end col-12 -->
+                      </div>
+                      <!-- end row -->
+                      <div class="xs-margin"></div>
+                      <div class="row">
+                        <div class="col-md-6 col-sm-3 col-xs-6 service-box-container">
+                          <div class="services-box">
+                            <div class="items"> <a href="#" data-placement="top" data-target="#modal-edit-vision-icon" data-toggle="modal" title="Edit">
+                              <div class="circle"><i class="fa fa-users"></i></div>
+                            </a> </div>
+                            Please fix the red bottom border missing issue due to inline editor when mouse-hover and edit the text.
+                            <div contenteditable="true">
+                              <h3>Vision <span class="small-bottom-border"></span></h3>
+                            </div>
+                            <div contenteditable="true">
+                              <blockquote>
+                                <p>To improve people's lifestyle by providing high class retail experience through well-trained and innovative employees.</p>
+                              </blockquote>
+                            </div>
+                          </div>
+                        </div>
+                        <!--Modal edit vision icon start-->
+                        <div id="modal-edit-vision-icon" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                          <div class="modal-dialog modal-wide-width">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                <h4 id="modal-login-label3" class="modal-title">Edit Icon</h4>
+                              </div>
+                              <div class="modal-body">
+                                <div class="form">
+                                  <form class="form-horizontal">
+                                    <div class="form-group">
+                                      <label class="col-md-3 control-label">Icon <span class='require'>*</span></label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" id="inputContent" value="users">
+                                        <div class="help-block">Please refer here for more <a href="icons.html" target="_blank">icon options.</a></div>
+                                      </div>
+                                    </div>
+                                    <div class="form-actions">
+                                      <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--END MODAL edit vision icon -->
+                        <!-- end col-md-6 -->
+                        <div class="col-md-6 col-sm-3 col-xs-6 service-box-container">
+                          <div class="services-box">
+                            <div class="items"> <a href="#" data-placement="top" data-target="#modal-edit-mission-icon" data-toggle="modal" title="Edit">
+                              <div class="circle"><i class="fa fa-thumbs-up"></i></div>
+                            </a> </div>
+                            Please fix the red bottom border missing issue due to inline editor when mouse-hover and edit the text.
+                            <div contenteditable="true">
+                              <h3>Mission <span class="small-bottom-border"></span></h3>
+                            </div>
+                            <div contenteditable="true">
+                              <blockquote>
+                                <p>To develop Area Top Shops with the best shopping and working environment.</p>
+                              </blockquote>
+                            </div>
+                          </div>
+                        </div>
+                        <!--Modal edit mission icon start-->
+                        <div id="modal-edit-mission-icon" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                          <div class="modal-dialog modal-wide-width">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                <h4 id="modal-login-label3" class="modal-title">Edit Icon</h4>
+                              </div>
+                              <div class="modal-body">
+                                <div class="form">
+                                  <form class="form-horizontal">
+                                    <div class="form-group">
+                                      <label class="col-md-3 control-label">Icon <span class='require'>*</span></label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" id="inputContent" value="thumbs-up">
+                                        <div class="help-block">Please refer here for more <a href="icons.html" target="_blank">icon options.</a></div>
+                                      </div>
+                                    </div>
+                                    <div class="form-actions">
+                                      <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--END MODAL edit mission icon -->
+                        <!-- end col-md-6 -->
+                        <div class="lg-margin"></div>
+                      </div>
+                      <!-- end row vision & mission -->
+                      <div class="xlg-margin"></div>
+                    </div>
+                    <!-- end col-md-12 -->
+                  </div>
+                  <!-- end message from MD -->
+                  <!-- our story start -->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <!-- our story start -->
+                      <div class="hero-unit">
+                        <div contenteditable="true">
+                          <h2>Our Story</h2>
+                        </div>
+                        <span class="small-bottom-border big"></span>
+                        <div contenteditable="true">
+                          <p>We started in a small way</p>
+                        </div>
+                      </div>
+                      <div class="md-margin2x"></div>
+                      <div contenteditable="true">
+                        <p>Tan Boon Ming started a business in 1945, before he got married and just after World War II. It was a small shop dealing in bicycles. He registered Syarikat Tan Boon Ming only in 1953 because then very few people registered their businesses.</p>
+                        <p>The company also ventured into sewing machines, furnitures &amp; radios. Later, it switched to electrical items to follow lifestyle changes. Business began to grow from the support of loyal customers. By the mid 1970s it moved into the present premises. Trading under the new name of Tan Boon Ming Sdn. Bhd. began on January 1, 2000.</p>
+                      </div>
+                      <hr>
+                      <div class="md-margin"></div>
+                      <!-- end our story -->
+                      <!-- our business strategy start -->
+                      <div class="hero-unit">
+                        <div contenteditable="true">
+                          <h3>Our Business Strategy</h3>
+                        </div>
+                        <span class="small-bottom-border big"></span>
+                        <div contenteditable="true">
+                          <p>Work very hard, smile often and give something extra if we can</p>
+                        </div>
+                      </div>
+                      <div class="md-margin2x"></div>
+                      <div contenteditable="true">
+                        <p>Our strategy then was simple - work very hard, smile often and give something extra if we can. Today our strategy remains the same except that we are now trying to be more colourful, by using a logo, to make us even easier to remember.</p>
+                      </div>
+                      <div class="xlg-margin"></div>
+                      <!-- end our business strategy -->
+                    </div>
+                    <!-- end col-md-12 -->
+                  </div>
+                  <!-- end row -->
+                  <div class="row">
+                    <!-- how to choose our logo concept start -->
+                    <div class="col-md-6 col-sm-3 col-xs-6">
+                      <div class="hero-unit">
+                        <div contenteditable="true">
+                          <h3>How to Choose Our Logo Concept</h3>
+                        </div>
+                        <span class="small-bottom-border big"></span>
+                        <div contenteditable="true">
+                          <p>What was important to us was how to provide reliable service to our customers</p>
+                        </div>
+                      </div>
+                      <div class="md-margin2x"></div>
+                      <div contenteditable="true">
+                        <p>Should we be identified with our industry? Should we portray our global potential?</p>
+                        <p>It was very difficult. What was important to us was how to provide reliable service to our customers. How to price the products affordably and yet remain profitable enough to pay staffs &amp; contractors fairly, so that they too could have a decent living whilst we could still grow bigger.</p>
+                        <p>We wanted a logo that was able to capture these sentiments.</p>
+                        <p>How the final design was selected We were given designs that carried "industry" themes &amp; depicted class. We toyed with bright colours like yellow. We tried the bluish greenish millennium colours. In the end we picked the simple red &amp; blue.</p>
+                        <p>They happened to be the company's existing colours - retaining it meant continuity. They were common, everyday colours - it signified acceptability. They have survived decades in time - it represents longevity. And of course the richness of blue and the warmness of red also spelt hope &amp; prosperity.</p>
+                        <p>We told the Artist to get out of the industry - to capture courtesy &amp; service in the logo. The final product was the accidental result of creative design - TBM in a graphic smile, complete with a dimple... the dot to also signify our world up there - happy, dancing and smiling.</p>
+                      </div>
+                    </div>
+                    <!-- end how to choose our logo concept -->
+                    <!-- responses to the logo start -->
+                    <div class="col-md-6 col-sm-3 col-xs-6">
+                      <div class="hero-unit">
+                        <div contenteditable="true">
+                          <h3>Responses to the Logo</h3>
+                        </div>
+                        <span class="small-bottom-border big"></span>
+                        <div contenteditable="true">
+                          <p>What was important to us was how to provide reliable service to our customers</p>
+                        </div>
+                      </div>
+                      <div class="md-margin2x"></div>
+                      <div contenteditable="true">
+                        <p>It was strongly rejected for being too abstract - but in it the group's Advisor saw the smile of Tan Long Kee, the group's Managing Director - the quiet smile of a gentleman. She could also see the smile developing into the full hearted laughter of Tan Long Han, the Managing Director of the Service Centre - the laugh of a sincere man.</p>
+                        <p>It was also the smile of our satisfied customers. The smile of our happy staffs. And the smile of our faithful contractors. It was the smile of our friends, our family and all the people around us.</p>
+                        <p>We asked the Artist to improve on the TBM smile. Then we presented it at the general assembly. From Chinese to Malay to English speaking, from the Store department to the Outdoor to the Sales, the MIS and the Service departments - the TBM smile was well received.</p>
+                        <p>Staffs said it was "a happy smile", "it showed no rank in the company", "it showed maju &amp; meningkat". It was simple &amp; nice.., from small to big.., the list went on. It was the people's smile! They could recognise it!</p>
+                        <p>The entire assembly voted for the TBM smile. After the assembly, we selected four more staffs for another special session. From MIS, one very young staff commented "globalisation is very distant, a smile brings us closer together".</p>
+                        <p>So that Friday April 28, 2000, we found our logo!</p>
+                        <p>We thank God for the many good years past &amp; present and for the many more good years to come.</p>
+                      </div>
+                    </div>
+                    <div class="xlg-margin"></div>
+                    <!-- end responses to the logo -->
+                  </div>
+                  <!-- end row -->
+                  <!-- end our story -->
+                </div>
+                <!-- End portlet body -->
+                <!-- save button start -->
+                <div class="form-actions none-bg"> <a href="#preview in browser/not yet published" class="btn btn-red">Save &amp; Preview &nbsp;<i class="fa fa-search"></i></a>&nbsp; <a href="#publish online" class="btn btn-blue">Save &amp; Publish &nbsp;<i class="fa fa-globe"></i></a>&nbsp; <a href="#" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                <!-- save button end -->
+              </div>
+              <!-- End portlet -->
+              <h4 class="block-heading">Objective</h4>
+              <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#objectivetext" data-toggle="tab">Objective Text</a></li>
+                <li><a href="#backgroundimage" data-toggle="tab">Background Image</a></li>
+              </ul>
+              <div id="myTabContent" class="tab-content">
+                <div id="objectivetext" class="tab-pane fade in active">
+                  <div class="portlet">
+                    <div class="portlet-header">
+                      <div class="caption">Objective</div>
+                      <br/>
+                      <p class="margin-top-10px"></p>
+                      <a href="#" data-target="#modal-add-objective" data-toggle="modal" class="btn btn-success">Add New Objective &nbsp;<i class="fa fa-plus"></i></a>&nbsp;
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary">Delete</button>
+                        <button type="button" data-toggle="dropdown" class="btn btn-red dropdown-toggle"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+                        <ul role="menu" class="dropdown-menu">
+                          <li><a href="#" data-target="#modal-delete-selected" data-toggle="modal">Delete selected item(s)</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#" data-target="#modal-delete-all" data-toggle="modal">Delete all</a></li>
+                        </ul>
+                      </div>
+                       
+<div class="tools"> <i class="fa fa-chevron-up"></i> </div>
+                      <!--Modal Add New Objective start-->
+                      <div id="modal-add-objective" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                        <div class="modal-dialog modal-wide-width">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                              <h4 id="modal-login-label3" class="modal-title">Add New Objective</h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="form">
+                                <form class="form-horizontal">
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Status</label>
+                                    <div class="col-md-6">
+                                      <div data-on="success" data-off="primary" class="make-switch">
+                                        <input type="checkbox" checked="checked"/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-md-3 control-label">Objective Text </label>
+                                    <div class="col-md-6">
+                                      <textarea name="textarea" rows="3" class="form-control"></textarea>
+                                    </div>
+                                    <div class="col-md-3"> </div>
+                                  </div>
+                                  <div class="form-actions">
+                                    <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--END MODAL Add New Objective-->
+                      <!--Modal delete selected items start-->
+                      <div id="modal-delete-selected" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                              <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete the selected item(s)? </h4>
+                            </div>
+                            <div class="modal-body">
+                              <p><strong>#1:</strong> To build long-term relationship with all stakeholders for sustainable growth.</p>
+                              <div class="form-actions">
+                                <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- modal delete selected items end -->
+                      <!--Modal delete all items start-->
+                      <div id="modal-delete-all" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                              <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete all items? </h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="form-actions">
+                                <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- modal delete all items end -->
+                    </div>
+                    <div class="portlet-body">
+                      <div class="form-inline pull-left">
+                        <div class="form-group">
+                          <select name="select" class="form-control">
+                            <option>10</option>
+                            <option>20</option>
+                            <option selected="selected">30</option>
+                            <option>50</option>
+                            <option>100</option>
+                          </select>
+                          &nbsp;
+                          <label class="control-label">Records per page</label>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <br/>
+                      <br/>
+                      <table class="table table-hover table-striped">
+                        <thead>
+                          <tr>
+                            <th width="1%"><input type="checkbox"/></th>
+                            <th>#</th>
+                            <th>Status</th>
+                            <th>Title</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><input type="checkbox"/></td>
+                            <td>1</td>
+                            <td><span class="label label-sm label-success">Active</span></td>
+                            <td>To build long-term relationship with all stakeholders for sustainable growth.</td>
+                            <td><a href="#" data-hover="tooltip" data-placement="top" data-target="#modal-edit-objective" data-toggle="modal" title="Edit"><span class="label label-sm label-success"><i class="fa fa-pencil"></i></span></a> <a href="#" data-hover="tooltip" data-placement="top" title="Delete" data-target="#modal-delete-1" data-toggle="modal"><span class="label label-sm label-red"><i class="fa fa-trash-o"></i></span></a>
+                                <!--Modal Edit Objective start-->
+                                <div id="modal-edit-objective" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                  <div class="modal-dialog modal-wide-width">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                        <h4 id="modal-login-label3" class="modal-title">Edit Objective</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                        <div class="form">
+                                          <form class="form-horizontal">
+                                            <div class="form-group">
+                                              <label class="col-md-3 control-label">Status</label>
+                                              <div class="col-md-6">
+                                                <div data-on="success" data-off="primary" class="make-switch">
+                                                  <input type="checkbox" checked="checked"/>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="form-group">
+                                              <label class="col-md-3 control-label">Objective Text </label>
+                                              <div class="col-md-9">
+                                                <div class="text-blue border-bottom">You can edit the content by clicking the text section below.</div>
+                                                when edit the objective text, pls follow the css and display correctly in front end.
+                                                <div contenteditable="true"> To build long-term relationship with all stakeholders for sustainable growth. </div>
+                                              </div>
+                                            </div>
+                                            <div class="form-actions">
+                                              <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                            </div>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                              <!--END MODAL Edit Montage-->
+                                <!--Modal delete start-->
+                                <div id="modal-delete-1" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                        <h4 id="modal-login-label4" class="modal-title"><a href=""><i class="fa fa-exclamation-triangle"></i></a> Are you sure you want to delete this objective? </h4>
+                                      </div>
+                                      <div class="modal-body">
+                                        <p><strong>#1:</strong> To build long-term relationship with all stakeholders for sustainable growth.</p>
+                                        <div class="form-actions">
+                                          <div class="col-md-offset-4 col-md-8"> <a href="#" class="btn btn-red">Yes &nbsp;<i class="fa fa-check"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">No &nbsp;<i class="fa fa-times-circle"></i></a> </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                              <!-- modal delete end -->
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td colspan="5"></td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                      <div class="tool-footer text-right">
+                        <p class="pull-left">Showing 1 to 10 of 57 entries</p>
+                        <ul class="pagination pagination mtm mbm">
+                          <li class="disabled"><a href="#">&laquo;</a></li>
+                          <li class="active"><a href="#">1</a></li>
+<li><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">5</a></li>
+<li><a href="#">&raquo;</a></li>
+</ul>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <!-- End porlet -->
+                </div>
+                <!-- end tab objective text -->
+                <div id="backgroundimage" class="tab-pane fade">
+                  <div class="portlet">
+                    <div class="portlet-header">
+                      <div class="caption">Edit Objective Background Image</div>
+                      <div class="tools"> <i class="fa fa-chevron-up"></i> </div>
+                    </div>
+                    <div class="portlet-body">
+                      <table class="table table-hover table-striped">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Status</th>
+                            <th>Title</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td><span class="label label-sm label-success">Active</span></td>
+                            <td>Objective Background Image</td>
+                            <td><a href="#" data-hover="tooltip" data-placement="top" data-target="#modal-edit-objective-background" data-toggle="modal" title="Edit"><span class="label label-sm label-success"><i class="fa fa-pencil"></i></span></a>
+                                <!--Modal Edit Objective Background image start-->
+                                <div id="modal-edit-objective-background" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true" class="modal fade">
+                                  <div class="modal-dialog modal-wide-width">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                                        <h4 id="modal-login-label3" class="modal-title">Edit Objective Background Image</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                        <div class="form">
+                                          <form class="form-horizontal">
+                                            <div class="form-group">
+                                              <label class="col-md-3 control-label">Status</label>
+                                              <div class="col-md-6">
+                                                <div data-on="success" data-off="primary" class="make-switch">
+                                                  <input type="checkbox" checked="checked"/>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="form-group">
+                                              <label class="col-md-3 control-label">Title </label>
+                                              <div class="col-md-6">
+                                                <input id="text" type="text" class="form-control" placeholder="Objective Background Image" value="Objective Background Image">
+                                              </div>
+                                            </div>
+                                            <div class="form-group">
+                                              <label class="col-md-3 control-label">Upload Background Image <span class='require'>*</span></label>
+                                              <div class="col-md-9">
+                                                <div class="text-15px margin-top-10px"> <img src="../images/testimonialsbg.jpg" alt="Objective" class="img-responsive"><br/>
+                                                    <input id="exampleInputFile2" type="file"/>
+                                                    <br/>
+                                                    <span class="help-block">(Image dimension: min. 1543 x 600 pixels, JPEG/GIF/PNG only, Max. 1MB) </span> </div>
+                                              </div>
+                                            </div>
+                                            <div class="form-actions">
+                                              <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                            </div>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                              <!--END MODAL Edit Objective background image -->
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td colspan="4"></td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end background image -->
+              </div>
+              <!-- end tab content -->
+            </div>
+          </div>
+        </div>
+        <!-- TemplateEndEditable -->
+        <!--END CONTENT-->
+            
+            <!--BEGIN FOOTER-->
+  <div class="page-footer">
+                <div class="copyright"><span class="text-15px">2015 © <a href="http://www.webqom.com" target="_blank">Webqom Technologies Sdn Bhd.</a> Any queries, please contact <a href="mailto:support@webqom.com">Webqom Support</a>.</span>
+                	<div class="pull-right"><img src="../admin_html/images/logo_webqom.png" alt="Webqom Technologies Sdn Bhd"></div>
+                </div>
+            </div>
+    <!--END FOOTER--></div>
+  <!--END PAGE WRAPPER--></div>
+</div>
+<script src="../admin_html/js/jquery-1.9.1.js"></script>
+<script src="../admin_html/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../admin_html/js/jquery-ui.js"></script>
+<!--loading bootstrap js-->
+<script src="../admin_html/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="../admin_html/vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="../admin_html/js/html5shiv.js"></script>
+<script src="../admin_html/js/respond.min.js"></script>
+<script src="../admin_html/vendors/metisMenu/jquery.metisMenu.js"></script>
+<script src="../admin_html/vendors/slimScroll/jquery.slimscroll.js"></script>
+<script src="../admin_html/vendors/jquery-cookie/jquery.cookie.js"></script>
+<script src="../admin_html/js/jquery.menu.js"></script>
+<script src="../admin_html/vendors/jquery-pace/pace.min.js"></script>
+
+<!--LOADING SCRIPTS FOR PAGE-->
+<script src="../admin_html/vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="../admin_html/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../admin_html/vendors/moment/moment.js"></script>
+<script src="../admin_html/vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../admin_html/vendors/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+<script src="../admin_html/vendors/bootstrap-clockface/js/clockface.js"></script>
+<script src="../admin_html/vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="../admin_html/vendors/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script src="../admin_html/vendors/jquery-maskedinput/jquery-maskedinput.js"></script>
+<script src="../admin_html/js/form-components.js"></script>
+<!--LOADING SCRIPTS FOR PAGE-->
+<!-- TemplateBeginEditable name="EditRegion4" -->
+<script src="../admin_html/vendors/tinymce/js/tinymce/tinymce.min.js"></script>
+<script src="../admin_html/vendors/ckeditor/ckeditor.js"></script>
+<script src="../admin_html/js/ui-tabs-accordions-navs.js"></script>
+<!-- TemplateEndEditable -->
+
+
+<!--CORE JAVASCRIPT-->
+<script src="../admin_html/js/main.js"></script>
+<script src="../admin_html/js/holder.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+@extends('adminLayout')
+@section('content')
+ <!--Loading bootstrap css-->
+
+
+
+<div id="page-wrapper">
+    <div class="page-header-breadcrumb">
+    	<div class="page-heading hidden-xs">
+		    <h1 class="page-title">Orders</h1>
+	    </div>
+
+        <ol class="breadcrumb page-breadcrumb">
+            <li><i class="fa fa-home"></i>&nbsp;<a href="{{ url('web88cms/dashboard') }}">Dashboard</a>&nbsp; <i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li>Orders &nbsp;<i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li><a href="{{ url('web88cms/orders') }}">Orders Listing</a> &nbsp;<i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li><a href="{{ url('web88cms/orders/detail/' . $order->id) }}">Order Details</a>&nbsp; <i class="fa fa-angle-right"></i>&nbsp;</li>
+            <li class="active">Order Confirmation</li>
+        </ol>
+        <div class="pull-right"><a onClick="javascript:CallPrint('print-content');" class="btn btn-default" style="margin-right:10px;margin-top:10px;" title="Print">Print invoice</a></div>
+
+        <script language="javascript">
+        function CallPrint(strid)
+        {
+        	var prtContent = document.getElementById(strid);
+          console.log(prtContent);
+        	var prtCSS = '<link type="text/css" rel="stylesheet" href="/public/admin/vendors/jquery-ui-1.10.3.custom/css/ui-lightness/jquery-ui-1.10.3.custom.css">' +
+                       '<link type="text/css" rel="stylesheet" href="/public/admin/vendors/bootstrap/css/bootstrap.min.css">';
+        	var WinPrint = window.open('','','left=50,top=50,width=800,height=640,toolbar=0,scrollbars=1,status=0');
+        	WinPrint.document.write('<div id="print" class="contentpane">');
+        	WinPrint.document.write(prtCSS);
+        	WinPrint.document.write(prtContent.innerHTML);
+        	 WinPrint.document.write('</div>');
+        	WinPrint.document.close();
+        	WinPrint.focus();//
+           //WinPrint.print();
+        	//WinPrint.close();
+        	prtContent.innerHTML=strOldOne;
+        }
+        </script>
+
+        <div class="page-content">
+          <div id = "print-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-body">
+
+<div style="padding:0px; margin:0px;">
+    <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" style="padding:10px; background:#fff;">
+        <tr>
+            <td width="550" align="left" valign="top" style="border-bottom:1px solid #ccc;"><img src="{{ asset('/public/front/images/index/logo.jpg') }}" /></td>
+            <td width="450" align="right" valign="top" style="border-bottom:1px solid #ccc; padding:10px 0 20px; text-align:right;">
+                <strong>TAN BOON MING SDN BHD</strong> (494355-D) <br />
+                PS 4,5,6 & 7, Taman Evergreen, Batu 4, <br />Jalan Klang Lama, 58100 Kuala Lumpur.<br />
+                Tel: (603) 7983-2020 (Hunting Lines)<br />
+                Fax: (603) 7982-8141<br />
+                info@tbm.com.my<br />
+                Business Hours:<br />
+                Mon. - Sat.: 9.30am - 9.00pm<br />
+                Sun.: 10.00am - 9.00pm<br />
+            </td>
+        </tr>
+        <tr>
+            <td width="550" align="left" valign="top" style="border-bottom:1px solid #ccc; padding:10px 0 20px;"><h2 style="padding:0px; margin:0px; color:#444645; font-size:32px;">Order Confirmation</h2></td>
+            <td width="450" align="right" valign="top" style="border-bottom:1px solid #ccc; padding:10px 0 20px;"><h2 style="padding:0px; margin:0px; color:#444645; font-size:15px;">Order #{{ $order->order_id }}</h2></td>
+        </tr>
+        <tr>
+        	<td colspan="2" align="left" valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+        	<td align="left" valign="top" style="color:#646464; font-size:20px; padding:5px 0; margin:0px;"><strong>Billed To:</strong></td>
+        	<!-- <td align="right" valign="top" style="color:#646464; font-size:20px; padding:5px 0; margin:0px;"><strong>Shipped To:</strong></td> -->
+        </tr>
+        <tr>
+        	<td align="left" valign="top" style="color:#646464; font-size:14px; padding:3px 0; margin:0px;">{{ $order->billing_first_name . ' ' . $order->billing_last_name }}</td>
+        	<!-- <td align="right" valign="top" style="color:#646464; font-size:14px; padding:3px 0; margin:0px;">$order->shipping_first_name . ' ' . $order->shipping_last_name</td> -->
+        </tr>
+        <tr>
+        	<td align="left" valign="top" style="color:#646464; font-size:14px; padding:3px 0; margin:0px;">{{ $order->billing_address }},<br/> {{ $order->billing_post_code }} {{ $order->billing_city }}, <br/>{{ $order->billing_state_name }}, {{ $order->billing_country_name }}.</td>
+        	<!-- <td align="right" valign="top" style="color:#646464; font-size:14px; padding:3px 0; margin:0px;"> $order->shipping_address ,<br/>  $order->shipping_post_code   $order->shipping_city , <br/> $order->shipping_state_name ,  $order->shipping_country_name .</td> -->
+        </tr>
+        <tr>
+        	<td align="left" valign="top">&nbsp;</td>
+        	<td align="right" valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+        	<td align="left" valign="top" style="color:#646464; font-size:20px; padding:5px 0; margin:0px;"><strong>Payment Status:</strong></td>
+        	<td align="right" valign="top" style="color:#646464; font-size:20px; padding:5px 0; margin:0px;"><strong>Order Status:</strong></td>
+        </tr>
+        <tr>
+        	<td align="left" valign="top" style="color:#646464; font-size:14px; padding:3px 0; margin:0px;">{{ $order->status }}</td>
+        	<td align="right" valign="top" style="color:#646464; font-size:14px; padding:3px 0; margin:0px;">{{ $order->payment_status }}</td>
+        </tr>
+
+        <tr>
+        	<td align="left" valign="top" style="color:#646464; font-size:20px; padding:5px 0; margin:0px;"><strong>Payment Method:</strong></td>
+        	<td align="right" valign="top" style="color:#646464; font-size:20px; padding:5px 0; margin:0px;"><strong>Order Date:</strong></td>
+        </tr>
+        <tr>
+        	<td align="left" valign="top" style="color:#646464; font-size:14px; padding:3px 0; margin:0px;">{{ $order->payment_method }}</td>
+        	<td align="right" valign="top" style="color:#646464; font-size:14px; padding:3px 0; margin:0px;">{{ date('dS M, Y', strtotime($order->createdate)) }}</td>
+        </tr>
+        <tr>
+        	<td align="left" valign="top" style="color:#646464; font-size:14px; padding:3px 0; margin:0px;">{{ $order->billing_email }}</td>
+        	<td align="right" valign="top" style="color:#646464; font-size:14px; padding:3px 0; margin:0px;">&nbsp;</td>
+        </tr>
+        <tr>
+        	<td colspan="2" align="left" valign="top" style=" padding:0px 0 0; margin:0 0 0px;"><h2 style="padding:10px 0; margin:0px; color:#444645; font-size:22px;">Order summary</h2></td>
+        </tr>
+</table>;
+<div style="padding-left:00px; margin:0px;">
+  <table class="table checkout-table" style='border: 1px solid #e0e0e0;margin-bottom: 0;margin-left:100px;width: 1100px; padding-left:400px;max-width: 100%;margin: 0 0 1.5em;background-color: transparent;border-spacing: 0;border-collapse: collapse;display: table;background-color: white; font-family: "Poppins", sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #787878;-webkit-font-smoothing: antialiased;'>
+      <thead>
+          <tr>
+              <th class="table-title" style='font: 700 16px/22px "Montserrat", sans-serif;color: #4d4d4d;font-weight: 700;text-transform: uppercase;padding: 15px;border-color: transparent;border-right: 1px solid #e0e0e0;background: #fafafa; border-bottom: 1px solid #e0e0e0;text-align: center;vertical-align: bottom;border-collapse: collapse;'>Types</th>
+              <th class="table-title" style='font: 700 16px/22px "Montserrat", sans-serif;color: #4d4d4d;font-weight: 700;text-transform: uppercase;padding: 15px;border-color: transparent;border-right: 1px solid #e0e0e0;background: #fafafa; border-bottom: 1px solid #e0e0e0;text-align: center;vertical-align: bottom;border-collapse: collapse;'>Room Code</th>
+              <th class="table-title" style='font: 700 16px/22px "Montserrat", sans-serif;color: #4d4d4d;font-weight: 700;text-transform: uppercase;padding: 15px;border-color: transparent;border-right: 1px solid #e0e0e0;background: #fafafa; border-bottom: 1px solid #e0e0e0;text-align: center;vertical-align: bottom;border-collapse: collapse;'>Unit Price / night (nett)</th>
+              <th class="table-title" style='font: 700 16px/22px "Montserrat", sans-serif;color: #4d4d4d;font-weight: 700;text-transform: uppercase;padding: 15px;border-color: transparent;border-right: 1px solid #e0e0e0;background: #fafafa; border-bottom: 1px solid #e0e0e0;text-align: center;vertical-align: bottom;border-collapse: collapse;'>Quantity</th>
+              <th class="table-title" style='font: 700 16px/22px "Montserrat", sans-serif;color: #4d4d4d;font-weight: 700;text-transform: uppercase;padding: 15px;border-color: transparent;border-right: 1px solid #e0e0e0;background: #fafafa; border-bottom: 1px solid #e0e0e0;text-align: center;vertical-align: bottom;border-collapse: collapse;'>SubTotal</th>
+          </tr>
+      </thead>
+      <tbody>
+        <?php
+         // cart info
+         $total_amount = 0;
+         foreach ($order_to_products as $key => $value) {
+
+             $total_amount += $value->sale_price * $value->quantity;
+             $img = asset('/public/admin/products/medium/'.$value->thumbnail_image_1);
+             ?>
+             <tr>
+                 <td class="item-name-col" style='text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top;width: 390px;'>
+                  <div style="float:left">
+                     <figure>
+                         <a href="#room-details"><img src="{{ $img }}" alt="Deluxe Room" class="img-responsive" style="display: inline-block; max-width: 100%; height: auto; width: 100px;height:87px; margin: auto; vertical-align: middle; border: 0;"></a>
+                     </figure>
+                   </div>
+                     <div style="float:left; margin-left: 10px; margin-top: -5px;">
+                     <header style='font-size: 18px;color: #333;line-height: 18px;font-weight: 600;margin-bottom: 15px;text-align: left;'>
+                         <?= $value->type ?>
+                     </header>
+                     <ul style="font-size:15px; margin-top:0px;  margin-left:-20px;">
+                         <li><b>BED:</b> <span style="text-transform: lowercase;"><?= $value->bed ?> </span></li>
+                         <li><b>GUEST:</b> <span style="text-transform: lowercase;"><?= $value->guest ?></span></li>
+                         <li><b>MEAL:</b> <span style="text-transform: lowercase;"><?= $value->meal ?></span></li>
+                     </ul>
+                    </div>
+                 </td>
+
+                 <td class="item-price-col" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top; font-size:15px; text-align:center; width:150px;'><?= $value->room_code ?></td>
+                 <td class="item-price-col" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top; font-size:15px; text-align:center; width:150px;'><span class="item-price-special">RM <?= $value->sale_price ?>.<span class="sub-price">00</span></span></td>
+                 <td style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top; font-size:15px; text-align:center;'><?= $value->quantity ?></td>
+                 <td class="item-total-col" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top; font-size:15px; text-align:center;'><span class="item-price-special">RM <?= $value->sale_price * $value->quantity ?>.<span class="sub-price">00</span></span>
+                 </td>
+             </tr>
+         <?php } ?>
+          <tr>
+              <td class="checkout-table-title text-right" colspan="3" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top;'></td>
+              <td class="checkout-table-title text-black" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top;'><span class="alignleft">Subtotal</span></td>
+              <td class="checkout-table-price text-black" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top;'>RM <?= $total_amount ?><span class="sub-price">.00</span></span></td>
+          </tr>
+          <tr>
+              <td class="checkout-table-title text-right" colspan="3" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top;'></td>
+              <td class="checkout-table-title text-danger" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top;'><span class="alignleft" style="color:#a94442;">Discount @if(isset($promo->promo_code)) ({{$promo->promo_code}}) @endif<span class="text-12px" style="color:#a94442;"></span></span></span> </td>
+              <?php
+              $discount_price = $discount;
+              $promo_d = isset($promo->discount) ? ($total_amount - $discount_price - (($total_amount - $discount_price) / 100 * $promo->discount)) : $total_amount - $discount_price;
+              $p_disc = isset($promo->discount) ? $promo->discount : 0;
+              ?>
+              <td class="checkout-table-price text-danger" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top; color:#a94442;"'>- RM <?= (($total_amount - $discount_price) / 100 * $p_disc) ?><span class="sub-price" style="color:#a94442;">.00</span></td>
+          </tr>
+
+          <tr>
+              <td class="checkout-table-title text-right" colspan="3" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top;'></td>
+              <td class="checkout-table-title text-black" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top;'><span class="alignleft">GST (6%)</span></td>
+              <td class="checkout-table-price text-black" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top;'><span >RM {{ number_format($total_amount/100*6,2) }}<span class="sub-price"></span></span></td>
+          </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+             <td class="checkout-table-title text-right" colspan=" 3"style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top;'></td>
+             <td class="checkout-total-title" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top;'><span class="alignleft"><b>TOTAL</b></span></td>
+             <td class="checkout-total-price cart-total" style='font: 500 18px/20px "Poppins", sans-serif;text-transform: uppercase;padding: 5px;border-top: 1px solid #e0e0e0!important; border-right: 1px solid #e0e0e0!important;vertical-align: top; color: #78A994;'><b>RM <?= number_format($promo_d + ($total_amount / 100 * 6), 2) ?><span class="sub-price"></span></b></td>
+          </tr>
+      </tfoot>
+  </table>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="page-footer">
+<div class="copyright"><span class="text-15px">2015 © <a href="http://www.webqom.com" target="_blank">Webqom Technologies Sdn Bhd.</a> Any queries, please contact <a href="mailto:support@webqom.com">Webqom Support</a>.</span>
+<div class="pull-right"><img src="{{ asset('/public/admin/images/logo_webqom.png') }}" alt="Webqom Technologies Sdn Bhd"></div>
+
+@endsection

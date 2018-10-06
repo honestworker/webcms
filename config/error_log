@@ -1,0 +1,2 @@
+[20-Apr-2017 18:06:18 Europe/Moscow] PHP Fatal error:  Call to undefined function env() in /home/mooncakes4791/public_html/config/app.php on line 162
+[20-Apr-2017 18:07:32 Europe/Moscow] PHP Fatal error:  Call to undefined function storage_path() in /home/mooncakes4791/public_html/config/database.php on line 51

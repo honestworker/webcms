@@ -1,0 +1,63 @@
+.button,
+.section_title,
+.caption-head:hover,
+.flex-control-paging li a.flex-active,
+.index_static,
+.camera_wrap .camera_pag .camera_pag_ul li.cameracurrent > span{
+	background-color: #cc0000;
+}
+.promotion_table .head_table{
+	background-color: #ff4a39;
+}
+.button{
+	border: 1px solid #AF2E22;
+	-webkit-box-shadow: inset 0 2px 0 #F2664F;
+	box-shadow: inset 0 2px 0 #F2664F;	
+}
+.button:hover,
+.camera_wrap .camera_pag .camera_pag_ul li.cameracurrent > span:hover{
+	/*background: #f4594f;*/
+    background: #3a87ad;
+	-webkit-box-shadow: inset 0 2px 0 #6FAFCE;
+	box-shadow: inset 0 2px 0 #6FAFCE;
+}
+.index_static,
+.section_title{
+	background: #cc0000 url("../../img/bg_index_static.png");
+	
+}
+
+.section_title1{
+	background: #ffffff /*url("../../img/bg_index_static.png")*/;
+	
+}
+.overlay{
+	background: #e64b3c url("../../img/download.png") no-repeat center center;;
+	background: rgba(230, 75, 60,0.6) url("../../img/download.png") no-repeat center center;
+}
+
+.sf-menu > li > a:hover{
+	color: #CCCCCC;
+}
+
+.results h2,
+.camera_caption h1 span,
+/*.sf-menu > li > a:hover,*/
+ul.filter li a:hover,
+ul.filter li a.active,
+.info_vertical span,
+.post h2 a:hover,
+.post h2 span,
+.comment .title_comment span a:hover,
+.head_table h2{
+	color: #cc0000;
+}
+.index_static h1 span{
+	color: #222;
+}
+.comments_carousel .image{
+	border: 5px solid #e64b3c;
+}
+.arrow_coment{
+	background: url("../../img/arrow_coment.png") no-repeat center;
+}

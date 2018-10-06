@@ -1,0 +1,302 @@
+@extends('front/templateFront')
+
+@section('content')
+
+<?php
+	$ordersModel = new App\Http\Models\Admin\Orders();
+    $orderTax = $ordersModel->getOrderTax($userOrderDetails[0]->id);
+// dd($ordersModel, $orderTax);
+?>
+        <section id="content">
+        	<!-- <div id="page-header">
+                <h1>Welcome Members!</h1>
+                <div class="sm-margin"></div>
+                <h2>The TBM Shopping Experience</h2>
+                <p class="line">&nbsp;</p>
+
+            </div> -->
+            <div class="md-margin2x"></div>
+            <div class="container">
+                <div class="row">
+                <div class="col-md-12 col-full-width">
+                    <div class="section-title-area text-center">
+                    <h2 class="section-title">Booking Details</h2>
+                    <p class="section-title-dec">View your booking details and track your booking.</p>
+                    </div><!--/.section-title-area-->
+                </div>
+                <div class="col-md-12" style="margin-bottom: 25px;">
+                <header class="content-title">
+                    <div class="pull-right">
+                    <a href="javascript:window.print()" class="btn btn-default">PRINT THIS PAGE &nbsp;<i class="fa fa-print"></i></a> &nbsp;
+                        <a href="#" class="btn btn-default">EMAIL &nbsp;<i class="fa fa-envelope"></i></a>
+                    </div>
+                </header>
+                </div>
+                	<div class="col-md-12">
+						<!-- <div class="hero-unit">
+                            <h2>Order Details</h2>
+                            <span class="small-bottom-border big"></span>
+                            <p>View your order details &amp; track your order.</p>
+                        </div> -->
+                        <div class="md-margin2x"></div>
+
+	                        <?php
+	                           	$gst = 0;
+	                            foreach($orderProducts as $orderProduct) {
+									$product = DB::table('products')->where('id', $orderProduct->product_id)->first();
+	                           		$price = $orderProduct->quantity * $orderProduct->amount;
+	               					$tax = 0;
+	                               	if ($product and $product->is_tax) {
+	                     				$tax = round($price * 0.06, 2);
+	                       				$gst += $tax;
+									}
+								}
+	                    		//	dd($orderProduct, $product);
+	                        ?>
+
+                                <table class="table cart-table" style="margin-bottom: 20px !important;">
+                                    <thead>
+                                        <tr>
+                                            <th class="table-title">Booking ID</th>
+                                            <th class="table-title">Date</th>
+                                            <th class="table-title">Order Total</th>
+                                            <th class="table-title">Payment Method</th>
+                                            <th class="table-title">Booking Status</th>
+                                            <th class="table-title">Payment Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><?php echo $userOrderDetails[0]->order_id;?></td>
+                                            <td><?php echo date('dS M, Y', strtotime($userOrderDetails[0]->modifydate));?></td>
+                                            <td>RM <?php echo number_format($orderTax->total + $orderTax->shipping_charge * 1.06, 2);?></td>
+                                            <td><?php echo $userOrderDetails[0]->payment_method;?></td>
+                                            <td>
+                                            	@if($userOrderDetails[0]->status == 'Processing')
+                                                    <span class="highlight fourth-color text-12px">Processing</span>
+                                                @elseif($userOrderDetails[0]->status == 'New Order')
+                                                    <span class="highlight orange-color text-12px">New Order</span>
+                                                @elseif($userOrderDetails[0]->status == 'Ready To Ship')
+                                                    <span class="highlight fourth-color text-12px">Ready To Ship</span>
+                                                @elseif($userOrderDetails[0]->status == 'Shipped')
+                                                    <span class="highlight blue-color text-12px">Shipped</span>
+                                                @elseif($userOrderDetails[0]->status == 'Completed')
+                                                    <span class="highlight first-color text-12px">Completed</span>
+                                                @elseif($userOrderDetails[0]->status == 'Declined')
+                                                    <span class="highlight third-color text-12px">Declined</span>
+                                                @elseif($userOrderDetails[0]->status == 'Cancelled')
+                                                    <span class="highlight black-color text-12px">Cancelled</span>
+                                                @else
+                                                    <span class="highlight black-color text-12px">New Order</span>
+                                                @endif
+                                            </td>
+                                            <td>
+                                            	@if($userOrderDetails[0]->payment_status == 'Paid')
+                                                    <span class="highlight first-color text-12px">Paid</span>
+                                                @elseif($userOrderDetails[0]->status == 'Processing')
+                                                    <span class="highlight fourth-color text-12px">Processing</span>
+                                                @elseif($userOrderDetails[0]->payment_status == 'Payment Error')
+                                                    <span class="highlight third-color text-12px">Payment Error</span>
+                                                @elseif($userOrderDetails[0]->payment_status == 'Cancelled')
+                                                    <span class="highlight black-color text-12px">Cancelled</span>
+                                                @endif
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                                <div class="md-margin"></div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        Check-in: <span class="text-black"><b>{{ date('dS M, Y', strtotime($userOrderDetails[0]->check_date->date_checkin)) }}</b></span>
+                                    </div>
+                                    <div class="col-md-12">
+                                        Check-out: <span class="text-black"><b>{{ date('dS M, Y', strtotime($userOrderDetails[0]->check_date->date_checkout)) }}</b></span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <h2 class="checkout-title">Guest Details</h2>
+                                        <ul>
+                                            <li><b>Guest Name:</b> <?php echo $userOrderDetails[0]->billing_first_name;?> <?php echo $userOrderDetails[0]->billing_last_name;?> </li>
+                                            <li><b>Telephone:</b> <?php echo $userOrderDetails[0]->billing_telephone;?></li>
+                                            <li><b>Address: </b><?php echo $userOrderDetails[0]->billing_address;?>, <?php echo $userOrderDetails[0]->billing_post_code;?> <?php echo $userOrderDetails[0]->billing_city;?>, <?php echo $userOrderDetails[0]->billing_state_name;?>, <?php echo $userOrderDetails[0]->billing_country_name;?>.</li>
+                                            <!-- <li><b>Email:</b> <?php echo $userOrderDetails[0]->billing_email;?></li> -->
+                                        </ul>
+
+                                        <div class="sm-margin"></div>
+
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <!-- <h2 class="checkout-title">Shipping Details</h2> -->
+                                        <ul style="margin-top: 60px;">
+                                            <li><b>Passport/NRIC:</b> </li>
+                                            <!-- <li><b>Ship to:</b> <?php echo $userOrderDetails[0]->shipping_first_name;?> <?php echo $userOrderDetails[0]->shipping_last_name;?> </li> -->
+                                            <li><b>Email:</b> <?php echo $userOrderDetails[0]->shipping_email;?></li>
+                                        </ul>
+
+                                    </div>
+                                 </div>
+
+                                <div class="lg-margin"></div>
+								<div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                    	<h2 class="checkout-title">Your Reservation Details</h2>
+
+                                <table class="table checkout-table table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <!-- <th class="table-title">Product Id</th> -->
+                                            <th class="table-title">Types</th>
+                                            <th class="table-title">Room Code</th>
+                                            <th class="table-title">Unit Price / Night (Nett)</th>
+                                            <th class="table-title">Quantity</th>
+                                            <!-- <th class="table-title" style="text-align: right;">GST (RM)</th> -->
+                                            <th class="table-title">Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                        $gst = 0;
+                                    ?>
+                                        @foreach($orderTax->products as $orderProduct)
+                                            <tr>
+                                                <!-- <td class="item-code">{{ $orderProduct->id }}</td> -->
+                                                <td class="item-name-col">
+                                                    <figure><a href="{{ url('web88cms/products/editProduct/' . $orderProduct->product_id) }}">
+                                                    	<img src="{{ asset('/public/admin/products/medium/' . $orderProduct->thumbnail_image_1) }}" alt="{{ $orderProduct->type }}" class="img-responsive">
+                                                    </a></figure>
+                                                    <header class="item-name">
+                                                        <a href="{{ url('web88cms/products/editProduct/' . $orderProduct->product_id) }}">{{ $orderProduct->type }}</a>
+                                                    </header>
+                                                    <ul>
+                                                        <li><i class="fa fa-bed"></i> <b>BED:</b> {{ $orderProduct->bed }} </li>
+                                                        <li><i class="fa fa-user"></i> <b>GUEST:</b> {{ $orderProduct->guest }}</li>
+                                                        <li><i class="fa fa-cutlery"></i> <b>MEAL: {{ $orderProduct->meal }}</b> </li>
+                                                    </ul>
+                                                    <ul>
+                                                      @if($orderProduct->color_name)
+	                                                      <li>Color: {{ $orderProduct->color_name }}</li>
+                                                      @endif
+
+                                                      @if($orderProduct->event_type)
+                                                          <li><i class="fa fa-gift text-red"></i> <span class="text-red"><b>For: {{ $orderProduct->event_type }}</b></span></li>
+                                                      @endif
+                                                    </ul>
+
+                                                    @if (!is_null($orderProduct->pwp_price))
+                                                    <span class="pwp-item">PWP ITEM</span>
+                                                    @endif
+                                                </td>
+                                                <td class="item-price-col text-center">{{ $orderProduct->room_code }}</td>
+                                                <td class="item-price-col">
+                                                @if (is_null($orderProduct->pwp_price))
+                                                {{ number_format($orderProduct->amount, 2) }}
+                                                @else
+                                                {{ number_format($orderProduct->pwp_price, 2) }}
+                                                @endif
+                                                </td>
+                                                <td class="item-price-col text-center">{{ $orderProduct->quantity }}</td>
+                                                <!-- <td class="item-price-col" style="text-align:right;padding-right:10px">{{ number_format($orderProduct->tax, 2) }}</td> -->
+                                                <td class="item-price-col">{{ number_format($orderProduct->subtotal + $orderProduct->tax, 2) }}</td>
+                                                <?php
+                                                    $gst += (($orderProduct->tax) * $orderProduct->quantity);
+                                                ?>
+                                            </tr>
+                                        @endforeach
+
+                                        <tr>
+                                            <td style="border: none; text-align: right;" colspan="4" class="checkout-table-title text-black text-right">SUBTOTAL:</td>
+                                            <!-- <td style="text-align:right;padding-right:10px">{{ number_format($orderTax->tax, 2) }}</td> -->
+                                            <td style="text-align:right;padding-right:10px" class="checkout-table-price text-black">RM {{ number_format($orderTax->subtotal, 2) }}</td>
+                                        </tr>
+<!--
+                                        <tr>
+                                            <td class="checkout-table-title" colspan="5">GST:</td>
+                                            <td class="checkout-table-price" align="center">RM {{ number_format($orderTax->tax, 2) }}</td>
+                                        </tr>
+-->
+                                        <!-- <tr>
+                                            <td style="border: none; text-align: right;" colspan="3">Shipping:</td>
+                                            <td style="border: none;text-align:right;padding-right:10px">{{ number_format($orderTax->shipping_charge, 2) }}</td>
+                                            <td style="border: none;text-align:right;padding-right:10px">{{ number_format($orderTax->shipping_charge * 0.06, 2) }}</td>
+                                            <td style="border: none;text-align:right;padding-right:10px">{{ number_format($orderTax->shipping_charge * 1.06, 2) }}</td>
+                                        </tr> -->
+                                        <tr>
+                                            <td style="border: none; text-align: right;" class="text-red checkout-table-title text-right" colspan="4">DISCOUNT:</td>
+                                            <!-- <td style="border: none;"></td> -->
+                                            <td style="border: none;text-align:right;padding-right:10px" class="text-red checkout-table-title text-right">- RM {{ number_format($orderTax->discount, 2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border: none; text-align: right;" class="checkout-table-title text-right" colspan="4">GST (6%):</td>
+                                            <!-- <td style="border: none;"></td> -->
+                                            <td style="border: none;text-align:right;padding-right:10px" class="checkout-table-title text-right">RM {{ number_format($gst, 2) }}</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td style="border: none; text-transform: none; text-align: right;" colspan="4" class="checkout-table-title text-right"><b>TOTAL:</b></td>
+                                            <!-- <td style="text-align:right;padding-right:10px"><b>{{ number_format($orderTax->tax + $orderTax->shipping_charge * 0.06, 2) }}</b></td> -->
+                                            <td style="text-align:right;padding-right:10px" class="checkout-total-price cart-total"><b>RM {{ number_format($orderTax->total + $orderTax->shipping_charge * 1.06, 2) }}</b></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+
+	                                    <div class="md-margin"></div>
+                                    </div>
+                                </div>
+                                <div class="md-margin"></div>
+                                <div class="row" style="margin-top: 100px">
+        	
+                                <div class="col-md-12">
+                                
+                                    <div class="single-room list mobile-extend">
+                                    <div class="room-info">
+                                        
+                                        <div class="room-description clearfix">
+                        
+                                        <h4 class="text-uppercase">Terms and Conditions</h4>
+                                                        
+                                        <ul class="list-group-item">
+                                            <li>- All rates listed are Nett rates inclusive of 10% service charge and 6% government tax.</li>
+                                            <li>- All rates quoted include breakfast.</li>
+                                            <li>- Check-in: 3:00 pm.</li>
+                                            <li>- Check-out: 12:00 pm.</li>
+                                            <li>- Rates are subject to change without prior notice.</li>
+                                        </ul>
+                                        <h4 class="margin-top">Cancellation Policy</h4>
+                                        <p>One night's room charge shall be levied on guaranteed reservations, in the event of "no show" or if cancelled within/less than 48 hours before the day of arrival. Please cancel online or contact us at (05) 242-7777.</p>	
+                                        <p>For bookings made less than 2 working days before arrival date, the hotel reserves the right to charge your credit card upon confirmation.</p>
+                                        <p>Cancellation policy for festive/peak season will supercede those stated here. Customers are deemed to have understood and agreed to the above before making this reservation.</p>
+                                        
+                                        
+                                        <div class="clearfix"></div>
+                                                    
+                                    <hr>
+                                                    
+                                    <div class="text-center">
+                                        <a href="/dashboard" class="btn btn-default btn-sm">Back</a>
+                                    </div>
+                                        
+                                        </div><!--/.room-description-->
+                                        
+                                    </div><!--/.room-info-->
+                                    </div><!--/.room-single-content-->
+                                </div><!--/. col-md-12-->
+                            </div>
+                                <a href="/dashboard" class="btn btn-custom"><i class="fa fa-angle-double-left"></i> BACK</a>
+                    </div>
+            	</div>
+    		</div>
+
+    </section>
+
+<?php
+	// Brands & Services are done in the templateFront.blade.php
+	if(isset($brands_scroller)) unset($brands_scroller);
+?>
+
+@endsection

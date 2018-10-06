@@ -1,0 +1,50 @@
+#calendar .fc-header .fc-header-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px !important;
+  opacity: 0.9;
+  text-transform: uppercase;
+}
+
+#calendar .fc-header .fc-header-left .fc-button-prev,
+#calendar .fc-header .fc-header-left .fc-button-prev:active,
+#calendar .fc-header .fc-header-left .fc-button-prev:active .fc-button-down:active,
+#calendar .fc-header .fc-header-right .fc-button-next,
+#calendar .fc-header .fc-header-right .fc-button-next:active {
+  background: none !important;
+  color: none;
+  border: none; 
+  padding: 0 !important;
+  text-align: center;
+  width: inherit;
+}
+
+#calendar .fc-header .fc-header-left .fc-button-prev span,
+#calendar .fc-header .fc-header-right .fc-button-next span {
+  display: none;
+}
+#calendar .fc-header .fc-header-left .fc-button-prev:after {
+  content: "\f100";
+  font: normal normal normal 20px/1 FontAwesome !important;
+}
+#calendar .fc-header .fc-header-right .fc-button-next:after {
+  content: "\f101";
+  font: normal normal normal 20px/1 FontAwesome !important;
+}
+
+#calendar .fc-content table tr  td {
+  height: 160px;
+  vertical-align: middle;
+}
+#calendar .fc-content table tr  td div {
+  min-height: 0px !important;
+}
+#calendar .fc-content table tr  td .fc-day-number {
+  border: 2px solid;
+  border-radius: 10px;
+  float: none;
+  height: 30px;
+  margin: auto;
+  cursor: pointer;
+  text-align: center;
+  width: 30px;
+}
